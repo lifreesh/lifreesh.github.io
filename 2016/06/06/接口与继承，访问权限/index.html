@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>接口与继承，访问权限 | lifreesh Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.如果父类的数据成员具有包访问权限，且父类与子类在同一个包，那么子类回继承父类的成员。
+2.子类不会继承父类的私有成员，但如果父类的public 或protected 方法可以访问这些成员，那么子类也一样可以；只是子类不具有this.name 的能力
+final 类和方法在方法中使用final 关键字表示该方法不能被子类覆盖，把类声明为final,则该类不能被继承。     
+构造器： 如过不自">
+<meta property="og:type" content="article">
+<meta property="og:title" content="接口与继承，访问权限">
+<meta property="og:url" content="https://lifreesh.github.io/2016/06/06/接口与继承，访问权限/index.html">
+<meta property="og:site_name" content="lifreesh Blog">
+<meta property="og:description" content="1.如果父类的数据成员具有包访问权限，且父类与子类在同一个包，那么子类回继承父类的成员。
+2.子类不会继承父类的私有成员，但如果父类的public 或protected 方法可以访问这些成员，那么子类也一样可以；只是子类不具有this.name 的能力
+final 类和方法在方法中使用final 关键字表示该方法不能被子类覆盖，把类声明为final,则该类不能被继承。     
+构造器： 如过不自">
+<meta property="og:updated_time" content="2016-06-06T06:09:53.506Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="接口与继承，访问权限">
+<meta name="twitter:description" content="1.如果父类的数据成员具有包访问权限，且父类与子类在同一个包，那么子类回继承父类的成员。
+2.子类不会继承父类的私有成员，但如果父类的public 或protected 方法可以访问这些成员，那么子类也一样可以；只是子类不具有this.name 的能力
+final 类和方法在方法中使用final 关键字表示该方法不能被子类覆盖，把类声明为final,则该类不能被继承。     
+构造器： 如过不自">
+  
+    <link rel="alternate" href="/atom.xml" title="lifreesh Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">lifreesh Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://lifreesh.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-接口与继承，访问权限" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/06/接口与继承，访问权限/" class="article-date">
+  <time datetime="2016-06-06T06:07:25.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      接口与继承，访问权限
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.如果父类的数据成员具有包访问权限，且父类与子类在同一个包，那么子类回继承父类的成员。</p>
+<p>2.子类不会继承父类的私有成员，但如果父类的public 或protected 方法可以访问这些成员，那么子类也一样可以；只是子类不具有this.name 的能力</p>
+<h3 id="final-类和方法"><a href="#final-类和方法" class="headerlink" title="final 类和方法"></a>final 类和方法</h3><p>在方法中使用final 关键字表示该方法不能被子类覆盖，把类声明为final,则该类不能被继承。     </p>
+<p>构造器： 如过不自定义一个构造器，编译器会提供一个无参数的默认构造器，但这个默认构造器会自动调用超类的无参构造器。这时候，如果超类没有无参构造器，就会出现编译错误</p>
+<h3 id="访问权限："><a href="#访问权限：" class="headerlink" title="访问权限："></a>访问权限：</h3><p>public   所有环境都可以访问</p>
+<p>protected  自己类内部，包，子类都可以， （包外不可以）</p>
+<p>无显示修饰（包级私有，包内可以访问，但子类不可以访问） 自己类内部，包都可以，但子类不可以访问，其他环境也不可以访问。（包外，子类都不可以）</p>
+<p>private  只有自己类的内部可以访问（子类不可以）</p>
+<p>最重要的就是 ‘无显示修饰’（包级私有）</p>
+<p>类内部当然可以访问， 包内也可以访问，比如，</p>
+<p>在同一个包的其他成员函数中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Man m = <span class="keyword">new</span> Man (<span class="number">30</span>));</span><br><span class="line">m.age; <span class="comment">//可行</span></span><br></pre></td></tr></table></figure>
+<p>而且数据成员可以被包内其他类所继承</p>
+<p>但如果是在别的包中，既不能被其他包所访问，也不能被其他包内的数据成员所继承</p>
+<p>所以说，如果一个类的构造器前不加public ， 那么在其他包外就不能构造 该类的对象。</p>
+<p>总的来说，数据成员或者方法 前面不加修饰的话，在包内，像public ,可以被继承，被访问</p>
+<p>在包外，既不能被访问，也不能被包外的类所继承</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    String  name =<span class="string">"none"</span>;</span><br><span class="line">    Person(String name )&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在包外，就无法访问name,无法访问Person</p>
+<p>但在包内，可以访问 name,可以访问 Person;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://lifreesh.github.io/2016/06/06/接口与继承，访问权限/" data-id="cip3mjwuo0004pouhpfsx7aoq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/06/Better-Java/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Better Java</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/java/" style="font-size: 20px;">java</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/06/接口与继承，访问权限/">接口与继承，访问权限</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/06/Better-Java/">Better Java</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/06/写好三个方法/">写好三个方法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/06/单例模式/">单例模式</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/30/iOS-书单/">iOS 书单</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Li Shuang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

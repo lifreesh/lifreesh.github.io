@@ -64,6 +64,65 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-接口与继承，访问权限" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/06/接口与继承，访问权限/" class="article-date">
+  <time datetime="2016-06-06T06:07:25.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/06/接口与继承，访问权限/">接口与继承，访问权限</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.如果父类的数据成员具有包访问权限，且父类与子类在同一个包，那么子类回继承父类的成员。</p>
+<p>2.子类不会继承父类的私有成员，但如果父类的public 或protected 方法可以访问这些成员，那么子类也一样可以；只是子类不具有this.name 的能力</p>
+<h3 id="final-类和方法"><a href="#final-类和方法" class="headerlink" title="final 类和方法"></a>final 类和方法</h3><p>在方法中使用final 关键字表示该方法不能被子类覆盖，把类声明为final,则该类不能被继承。     </p>
+<p>构造器： 如过不自定义一个构造器，编译器会提供一个无参数的默认构造器，但这个默认构造器会自动调用超类的无参构造器。这时候，如果超类没有无参构造器，就会出现编译错误</p>
+<h3 id="访问权限："><a href="#访问权限：" class="headerlink" title="访问权限："></a>访问权限：</h3><p>public   所有环境都可以访问</p>
+<p>protected  自己类内部，包，子类都可以， （包外不可以）</p>
+<p>无显示修饰（包级私有，包内可以访问，但子类不可以访问） 自己类内部，包都可以，但子类不可以访问，其他环境也不可以访问。（包外，子类都不可以）</p>
+<p>private  只有自己类的内部可以访问（子类不可以）</p>
+<p>最重要的就是 ‘无显示修饰’（包级私有）</p>
+<p>类内部当然可以访问， 包内也可以访问，比如，</p>
+<p>在同一个包的其他成员函数中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Man m = <span class="keyword">new</span> Man (<span class="number">30</span>));</span><br><span class="line">m.age; <span class="comment">//可行</span></span><br></pre></td></tr></table></figure>
+<p>而且数据成员可以被包内其他类所继承</p>
+<p>但如果是在别的包中，既不能被其他包所访问，也不能被其他包内的数据成员所继承</p>
+<p>所以说，如果一个类的构造器前不加public ， 那么在其他包外就不能构造 该类的对象。</p>
+<p>总的来说，数据成员或者方法 前面不加修饰的话，在包内，像public ,可以被继承，被访问</p>
+<p>在包外，既不能被访问，也不能被包外的类所继承</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    String  name =<span class="string">"none"</span>;</span><br><span class="line">    Person(String name )&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在包外，就无法访问name,无法访问Person</p>
+<p>但在包内，可以访问 name,可以访问 Person;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://lifreesh.github.io/2016/06/06/接口与继承，访问权限/" data-id="cip3mjwuo0004pouhpfsx7aoq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Better-Java" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/06/06/Better-Java/" class="article-date">
@@ -111,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lifreesh.github.io/2016/06/06/Better-Java/" data-id="cip3ks8x0000aeguh47w7q8lf" class="article-share-link">Share</a>
+      <a data-url="https://lifreesh.github.io/2016/06/06/Better-Java/" data-id="cip3mjwuj0002pouhw09zjl6w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -163,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lifreesh.github.io/2016/06/06/写好三个方法/" data-id="cip3ks8vm0002eguh38c3rpmc" class="article-share-link">Share</a>
+      <a data-url="https://lifreesh.github.io/2016/06/06/写好三个方法/" data-id="cip3mjwv8000apouh4ljskq6l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -203,7 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lifreesh.github.io/2016/06/06/单例模式/" data-id="cip3ks8wd0007eguhuuhcxgd5" class="article-share-link">Share</a>
+      <a data-url="https://lifreesh.github.io/2016/06/06/单例模式/" data-id="cip3mjwud0001pouh0vd5byv5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
@@ -271,7 +330,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lifreesh.github.io/2016/05/30/iOS-书单/" data-id="cip3ks8vj0001eguhr473f4vs" class="article-share-link">Share</a>
+      <a data-url="https://lifreesh.github.io/2016/05/30/iOS-书单/" data-id="cip3mjwvm000cpouh8heg8l5r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -318,7 +377,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lifreesh.github.io/2016/05/25/hello-world/" data-id="cip3ks8vc0000eguh1ar7g2ty" class="article-share-link">Share</a>
+      <a data-url="https://lifreesh.github.io/2016/05/25/hello-world/" data-id="cip3mjwu40000pouhqe0pzu0a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -372,6 +431,10 @@
       <ul>
         
           <li>
+            <a href="/2016/06/06/接口与继承，访问权限/">接口与继承，访问权限</a>
+          </li>
+        
+          <li>
             <a href="/2016/06/06/Better-Java/">Better Java</a>
           </li>
         
@@ -385,10 +448,6 @@
         
           <li>
             <a href="/2016/05/30/iOS-书单/">iOS 书单</a>
-          </li>
-        
-          <li>
-            <a href="/2016/05/25/hello-world/">Hello World</a>
           </li>
         
       </ul>
