@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>lifreesh Blog</title>
+  <title>Better Java | lifreesh Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lifreesh Blog">
-<meta property="og:url" content="https://lifreesh.github.io/index.html">
+  <meta name="description" content="如何写好equals 与 hashCode 函数Better Javahttps://github.com/cxxr/better-java
+Structs常见的Java Beans 如下
+123456789101112public class DataHolder&amp;#123;    private String data;    public DataHolder()&amp;#123;    &amp;#12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Better Java">
+<meta property="og:url" content="https://lifreesh.github.io/2016/06/06/Better-Java/index.html">
 <meta property="og:site_name" content="lifreesh Blog">
-<meta property="og:description">
+<meta property="og:description" content="如何写好equals 与 hashCode 函数Better Javahttps://github.com/cxxr/better-java
+Structs常见的Java Beans 如下
+123456789101112public class DataHolder&amp;#123;    private String data;    public DataHolder()&amp;#123;    &amp;#12">
+<meta property="og:updated_time" content="2016-06-06T05:18:56.845Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lifreesh Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Better Java">
+<meta name="twitter:description" content="如何写好equals 与 hashCode 函数Better Javahttps://github.com/cxxr/better-java
+Structs常见的Java Beans 如下
+123456789101112public class DataHolder&amp;#123;    private String data;    public DataHolder()&amp;#123;    &amp;#12">
   
     <link rel="alternate" href="/atom.xml" title="lifreesh Blog" type="application/atom+xml">
   
@@ -62,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Better-Java" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Better-Java" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/06/06/Better-Java/" class="article-date">
   <time datetime="2016-06-06T05:18:11.000Z" itemprop="datePublished">2016-06-06</time>
@@ -77,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/06/Better-Java/">Better Java</a>
+    <h1 class="article-title" itemprop="name">
+      Better Java
     </h1>
   
 
@@ -120,163 +125,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-单例模式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/06/单例模式/" class="article-date">
-  <time datetime="2016-06-06T02:52:19.000Z" itemprop="datePublished">2016-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/06/单例模式/">单例模式</a>
-    </h1>
+    <a href="/2016/06/06/单例模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">单例模式</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>单例模式，只上代码，不解释</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span>  Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> initialized = <span class="keyword">false</span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> statice <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (initialized) <span class="keyword">return</span> instance;</span><br><span class="line">        instance.init();</span><br><span class="line">        initialized = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://lifreesh.github.io/2016/06/06/单例模式/" data-id="cip3kikiq0003lcuhofo87idd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-iOS-书单" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/05/30/iOS-书单/" class="article-date">
-  <time datetime="2016-05-30T05:10:44.000Z" itemprop="datePublished">2016-05-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/30/iOS-书单/">iOS 书单</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h2><h3 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h3><ul>
-<li>Swift Programming : The Big Nerd Ranch Guide</li>
-<li>Swift Apprentice</li>
-<li>The Swift Programming Language</li>
-<li>Swift Pocket Reference</li>
-<li>Learning Swift</li>
-</ul>
-<h3 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h3><ul>
-<li>Swifter-100个Swift必备Tips(第二版)</li>
-<li>Advanced Swift</li>
-<li>Functional Swift</li>
-</ul>
-<h2 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h2><h3 id="入门-1"><a href="#入门-1" class="headerlink" title="入门"></a>入门</h3><ul>
-<li>Test-Driven.iOS.Development.with.Swift</li>
-<li>iOS 9 Programming Fundamentals with Swift</li>
-<li>iOS 9 Swift Programming Cookbook</li>
-<li>iOS 8 Swift Programming Cookbook</li>
-<li>Programing iOS9</li>
-<li>iOS Apprentice</li>
-<li>iOS 8 by tutorials</li>
-<li>iOS 9 by Tutorials</li>
-<li>iOS Auto Layout</li>
-</ul>
-<h3 id="进阶-1"><a href="#进阶-1" class="headerlink" title="进阶"></a>进阶</h3><ul>
-<li>Pro iOS Table Views and Collection Views</li>
-<li>iOS  Animations by Tutorials</li>
-<li>Core Data by Tutirials</li>
-<li>iOS Core Animation: Advanced Techniques(*)</li>
-<li>iOS 9 SDK Development: Creating iPhone and iPad Apps with Swift（*）</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://lifreesh.github.io/2016/05/30/iOS-书单/" data-id="cip3kikik0001lcuhxr9p4rfh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/05/25/hello-world/" class="article-date">
-  <time datetime="2016-05-25T05:09:27.839Z" itemprop="datePublished">2016-05-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/25/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://lifreesh.github.io/2016/05/25/hello-world/" data-id="cip3kikis0004lcuhr6nwgviz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
