@@ -5,22 +5,22 @@
   
   <title>Better Java | lifreesh Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何写好equals 与 hashCode 函数Better Javahttps://github.com/cxxr/better-java
+  <meta name="description" content="Better Javahttps://github.com/cxxr/better-java
 Structs常见的Java Beans 如下
-123456789101112public class DataHolder&amp;#123;    private String data;    public DataHolder()&amp;#123;    &amp;#12">
+123456789101112public class DataHolder&amp;#123;    private String data;    public DataHolder()&amp;#123;    &amp;#125;    public void setDat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Better Java">
 <meta property="og:url" content="https://lifreesh.github.io/2016/06/06/Better-Java/index.html">
 <meta property="og:site_name" content="lifreesh Blog">
-<meta property="og:description" content="如何写好equals 与 hashCode 函数Better Javahttps://github.com/cxxr/better-java
+<meta property="og:description" content="Better Javahttps://github.com/cxxr/better-java
 Structs常见的Java Beans 如下
-123456789101112public class DataHolder&amp;#123;    private String data;    public DataHolder()&amp;#123;    &amp;#12">
-<meta property="og:updated_time" content="2016-06-06T05:21:08.615Z">
+123456789101112public class DataHolder&amp;#123;    private String data;    public DataHolder()&amp;#123;    &amp;#125;    public void setDat">
+<meta property="og:updated_time" content="2016-06-06T05:25:51.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Better Java">
-<meta name="twitter:description" content="如何写好equals 与 hashCode 函数Better Javahttps://github.com/cxxr/better-java
+<meta name="twitter:description" content="Better Javahttps://github.com/cxxr/better-java
 Structs常见的Java Beans 如下
-123456789101112public class DataHolder&amp;#123;    private String data;    public DataHolder()&amp;#123;    &amp;#12">
+123456789101112public class DataHolder&amp;#123;    private String data;    public DataHolder()&amp;#123;    &amp;#125;    public void setDat">
   
     <link rel="alternate" href="/atom.xml" title="lifreesh Blog" type="application/atom+xml">
   
@@ -60,7 +60,7 @@ Structs常见的Java Beans 如下
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://lifreesh.github.io"></form>
@@ -91,7 +91,7 @@ Structs常见的Java Beans 如下
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="如何写好equals-与-hashCode-函数"><a href="#如何写好equals-与-hashCode-函数" class="headerlink" title="如何写好equals 与 hashCode 函数"></a>如何写好equals 与 hashCode 函数</h1><h1 id="Better-Java"><a href="#Better-Java" class="headerlink" title="Better Java"></a>Better Java</h1><p><a href="https://github.com/cxxr/better-java" target="_blank" rel="external">https://github.com/cxxr/better-java</a></p>
+        <h1 id="Better-Java"><a href="#Better-Java" class="headerlink" title="Better Java"></a>Better Java</h1><p><a href="https://github.com/cxxr/better-java" target="_blank" rel="external">https://github.com/cxxr/better-java</a></p>
 <h2 id="Structs"><a href="#Structs" class="headerlink" title="Structs"></a>Structs</h2><p>常见的Java Beans 如下</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataHolder</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String data;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DataHolder</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setData</span><span class="params">(String data)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  String <span class="title">getData</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.data;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>可以使用不变的C struct 类型</p>
@@ -110,14 +110,13 @@ Structs常见的Java Beans 如下
 <li>Apache Commons</li>
 <li>Guava</li>
 <li>Gson</li>
-<li>Java Tuples</li>
-<li></li>
+<li>Java Tuples<br>*</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lifreesh.github.io/2016/06/06/Better-Java/" data-id="cip3kn288000000uhr0uqxivx" class="article-share-link">Share</a>
+      <a data-url="https://lifreesh.github.io/2016/06/06/Better-Java/" data-id="cip3kqy4n000008uhjs7pc5w0" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -130,7 +129,7 @@ Structs常见的Java Beans 如下
   
   
     <a href="/2016/06/06/写好三个方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ouder</strong>
       <div class="article-nav-title">写好三个方法</div>
     </a>
   
@@ -148,7 +147,7 @@ Structs常见的Java Beans 如下
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li></ul>
     </div>
@@ -167,7 +166,7 @@ Structs常见的Java Beans 如下
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
     </div>
@@ -177,7 +176,7 @@ Structs常见的Java Beans 如下
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         
